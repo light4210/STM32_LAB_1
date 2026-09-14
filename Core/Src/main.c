@@ -91,7 +91,6 @@ int main(void)
   /* USER CODE END 2 */
 
   /* Infinite loop */
-  printf("Hello program!!!\n");
   /* USER CODE BEGIN WHILE */
   while (1)
   {
@@ -155,14 +154,32 @@ void SystemClock_Config(void)
   */
 static void MX_GPIO_Init(void)
 {
+  GPIO_InitTypeDef GPIO_InitStruct = {0};
   /* USER CODE BEGIN MX_GPIO_Init_1 */
 
   /* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOH_CLK_ENABLE();
+  __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOC, KEY_ROW_1_Pin|KEY_ROW_2_Pin|KEY_ROW_3_Pin|KEY_ROW_4_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pins : KEY_ROW_1_Pin KEY_ROW_2_Pin KEY_ROW_3_Pin KEY_ROW_4_Pin */
+  GPIO_InitStruct.Pin = KEY_ROW_1_Pin|KEY_ROW_2_Pin|KEY_ROW_3_Pin|KEY_ROW_4_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : KEY_COL_1_Pin KEY_COL_2_Pin KEY_COL_3_Pin KEY_COL_4_Pin */
+  GPIO_InitStruct.Pin = KEY_COL_1_Pin|KEY_COL_2_Pin|KEY_COL_3_Pin|KEY_COL_4_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
   /* USER CODE BEGIN MX_GPIO_Init_2 */
 
