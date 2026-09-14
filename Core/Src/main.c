@@ -91,6 +91,7 @@ int main(void)
   /* USER CODE END 2 */
 
   /* Infinite loop */
+  printf("Hello program!!!");
   /* USER CODE BEGIN WHILE */
   while (1)
   {
@@ -169,7 +170,17 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+int _write(int file, char *ptr, int len)
+{
+  (void)file;
+  int DataIdx;
 
+  for (DataIdx = 0; DataIdx < len; DataIdx++)
+  {
+    ITM_SendChar(*ptr++);
+  }
+  return len;
+}
 /* USER CODE END 4 */
 
 /**
