@@ -21,7 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include<stdio.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -91,7 +91,7 @@ int main(void)
   /* USER CODE END 2 */
 
   /* Infinite loop */
-  printf("Hello program!!!");
+  printf("Hello program!!!\n");
   /* USER CODE BEGIN WHILE */
   while (1)
   {
