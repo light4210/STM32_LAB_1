@@ -57,22 +57,22 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define KEY_ROW_1_Pin GPIO_PIN_0
-#define KEY_ROW_1_GPIO_Port GPIOC
-#define KEY_ROW_2_Pin GPIO_PIN_1
-#define KEY_ROW_2_GPIO_Port GPIOC
-#define KEY_ROW_3_Pin GPIO_PIN_2
-#define KEY_ROW_3_GPIO_Port GPIOC
-#define KEY_ROW_4_Pin GPIO_PIN_3
-#define KEY_ROW_4_GPIO_Port GPIOC
-#define KEY_COL_1_Pin GPIO_PIN_5
+#define KEY_COL_1_Pin GPIO_PIN_0
 #define KEY_COL_1_GPIO_Port GPIOC
-#define KEY_COL_2_Pin GPIO_PIN_6
+#define KEY_COL_2_Pin GPIO_PIN_1
 #define KEY_COL_2_GPIO_Port GPIOC
-#define KEY_COL_3_Pin GPIO_PIN_8
+#define KEY_COL_3_Pin GPIO_PIN_2
 #define KEY_COL_3_GPIO_Port GPIOC
-#define KEY_COL_4_Pin GPIO_PIN_9
+#define KEY_COL_4_Pin GPIO_PIN_3
 #define KEY_COL_4_GPIO_Port GPIOC
+#define KEY_ROW_1_Pin GPIO_PIN_5
+#define KEY_ROW_1_GPIO_Port GPIOC
+#define KEY_ROW_2_Pin GPIO_PIN_6
+#define KEY_ROW_2_GPIO_Port GPIOC
+#define KEY_ROW_3_Pin GPIO_PIN_8
+#define KEY_ROW_3_GPIO_Port GPIOC
+#define KEY_ROW_4_Pin GPIO_PIN_9
+#define KEY_ROW_4_GPIO_Port GPIOC
 
 /* USER CODE BEGIN Private defines */
 
